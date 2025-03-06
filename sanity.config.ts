@@ -12,4 +12,5 @@ export default defineConfig({
   basePath: '/studio', // ✅ Make sure Next.js routes correctly
   plugins: [deskTool()],
   schema: schema,
+  studioHost: 'internal-blogs-psi',
 });
