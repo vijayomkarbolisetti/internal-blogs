@@ -11,7 +11,5 @@ export default defineConfig({
   useCdn: false,
   basePath: '/studio', // ✅ Make sure Next.js routes correctly
   plugins: [deskTool()],
-  schema: {
-    types: schemas,
-  },
+  schema: schema,
 });
