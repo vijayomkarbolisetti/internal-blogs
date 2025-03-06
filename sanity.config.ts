@@ -3,12 +3,15 @@ import { deskTool } from "sanity/desk";
 import { schema } from "./sanity/schemas/index"; // ✅ Fix import path
 
 export default defineConfig({
-  name: "default",
-  title: "My Sanity Blog",
-  projectId: "fm2iaf7n", // ✅ Ensure this matches your Sanity project
-  dataset: "production",
+  name: 'default',
+  title: 'Internal Blogs',
+  projectId: 'fm2iaf7n', // ✅ Replace with your actual Project ID
+  dataset: 'production',
+  apiVersion: '2023-01-01',
+  useCdn: false,
+  basePath: '/studio', // ✅ Make sure Next.js routes correctly
   plugins: [deskTool()],
   schema: {
-    types: schema.types, // ✅ Use the correct schema export
+    types: schemas,
   },
 });
